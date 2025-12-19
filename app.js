@@ -890,7 +890,7 @@ CLAP CLAP CLAP!
       id: "15_north_pole_party_cype",
       order: 15,
       title: "North Pole Party (Cype)",
-      arc: "Fianle — North Pole Party (now-time)",
+      arc: "Finale — North Pole Party (now-time)",
       layer: "Present",
       thumb: "assets/art/15.png",
       art: "assets/art/15.png",

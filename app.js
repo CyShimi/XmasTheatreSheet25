@@ -965,11 +965,11 @@ Problem solved by tomorrow
 The Loon in the rafters crafting snow by hand
 Blueprints in the beat like a wonderland
 Whiteout spirals falling on the floor
-Lexxii in the back brewing trances for more
+Lexxxii in the back brewing trances for more
 Pera in the crowd, both hands to the sky
-Dancing back to back with if it fries it flies
-And no Opnet pulling off headspins
-Going all-in with boom fighting a spin to win
+Dancing back to back with if it flies it fries
+And noOpnet pulling off headspins
+Going all-in with Bewm fighting a spin to win
 
 North Pole  hands up high
 Snow in the air, let the bass fly

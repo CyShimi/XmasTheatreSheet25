@@ -57,9 +57,16 @@ body{
   gap: 10px;
 }
 .dot{
-  width:10px;height:10px;border-radius:999px;
-  background: rgba(255,255,255,0.75);
-  box-shadow: 0 0 18px rgba(255,255,255,0.25);
+  width:56px;
+  height:56px;
+
+  background-image: url("assets/ui/GlitchCatLogo.png"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 50%; 
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.35));
 }
 .title{ font-weight: 650; letter-spacing: 0.2px; }
 .subtitle{ font-size: 12px; color: var(--muted); margin-top:2px; }

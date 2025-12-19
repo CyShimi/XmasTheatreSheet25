@@ -6,7 +6,7 @@ Interactive “Theatre Sheet” web app for the Xmas 2025 project:
 - Lyrics per song (clean text, stream-friendly)
 
 ## Live
-Enable GitHub Pages in Settings → Pages, then your link will appear here.
+[Modular theatre sheet](https://cyshimi.github.io/XmasTheatreSheet25/)
 
 ## Local run
 Open `index.html` in a browser (recommended: Chrome/Firefox).

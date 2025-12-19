@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Theatre Sheet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="bg" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <div class="title">Soonmus</div>
+        <div class="subtitle">Modular theatre sheet</div>
+
+  <div class="socialButtons">
+  <a class="btn" href="https://www.twitch.tv/soonmuslive" target="_blank" rel="noopener noreferrer">Twitch</a>
+  <a class="btn" href="https://open.spotify.com/intl-de/artist/4ArwdTlO24vaXIHRaiGTxD?si=AxIgcBmsT0qgt7hA-KCS4A" target="_blank" rel="noopener noreferrer">Spotify</a>
+  <a class="btn" href="https://www.youtube.com/@soonmus" target="_blank" rel="noopener noreferrer">YouTube - Videos</a>
+  <a class="btn" href="https://www.youtube.com/channel/UCjX9pZTZP3A2lStatYmc9-g" target="_blank" rel="noopener noreferrer">YouTube - Music</a>
+</div>
+
+
+      </div>
+    </div>
+
+    <nav class="actions">
+      <button id="btnHome" class="btn">Path</button>
+      <a class="btn ghost" id="btnPlaylist" href="#" target="_blank" rel="noreferrer">Playlist</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="path" aria-label="Song path">
+      <svg class="wave" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 40 220
+                 C 160 60, 260 360, 380 200
+                 C 500 40, 620 360, 740 200
+                 C 860 60, 940 320, 980 210"
+              fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="6"
+              stroke-linecap="round" />
+      </svg>
+
+      <div id="nodes" class="nodes" aria-live="polite"></div>
+    </section>
+
+    <section class="panel" aria-label="Chapter panel">
+      <div id="panelEmpty" class="panel-empty">
+        <h2>Open a bubble.</h2>
+        <p>Artwork becomes the stage. Lyrics appear below.</p>
+      </div>
+
+      <article id="panel" class="panel-card hidden">
+        <header class="panel-head">
+          <div>
+            <h2 id="panelTitle"></h2>
+            <div id="panelMeta" class="panel-meta"></div>
+          </div>
+          <div class="panel-buttons">
+            <button id="btnClose" class="btn ghost">Close</button>
+            <a id="btnArt" class="btn ghost" href="#" target="_blank" rel="noreferrer">Open artwork</a>
+            <a id="btnYT" class="btn" href="#" target="_blank" rel="noreferrer">Play</a>
+          </div>
+        </header>
+
+        <div id="lyrics" class="lyrics"></div>
+
+        <footer class="panel-foot">
+          <button id="btnPrev" class="btn ghost">← Prev</button>
+          <button id="btnNext" class="btn ghost">Next →</button>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

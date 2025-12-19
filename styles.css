@@ -60,7 +60,7 @@ body{
   width:56px;
   height:56px;
 
-  background-image: url("assets/art/ui/GlitchCatLogo.png"); 
+  background-image: url("/assets/art/ui/GlitchCatLogo.png"); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

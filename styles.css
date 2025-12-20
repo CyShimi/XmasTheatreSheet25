@@ -1,5 +1,5 @@
 /* Hide top-right header controls for now */
-#btnHome, #btnPlaylist, #btnYT { display: none !important; }
+#btnHome, #btnYT { display: none !important; }
 
 :root{
   --bg: #0b0f14;

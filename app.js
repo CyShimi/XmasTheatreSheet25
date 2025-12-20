@@ -4,7 +4,7 @@
 // art: large background artwork
 // lyricsSections: keep chapters linear inside each song
 const DATA = {
-  playlistUrl: "https://youtube.com/playlist?list=YOUR_PLAYLIST_ID",
+  playlistUrl: "https://distrokid.com/hyperfollow/soonmus/holiday-havoc",
   songs: [
     {
       id: "01_where_did_santa_go",

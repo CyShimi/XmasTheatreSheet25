@@ -15,6 +15,7 @@ const DATA = {
       thumb: "assets/art/01.png",
       art: "assets/art/01.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/6OeaZ8P9sRE3ylDubBymzy?utm_source=generator",
       lyricsSections: [
         { 
           label: "Lyrics", 
@@ -87,6 +88,7 @@ Where did Santa go-o-o-o
       thumb: "assets/art/02.png",
       art: "assets/art/02.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/2VzmQPnAEKbr90SSKGjAzp?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`Ten… seconds.
 That’s how long it takes for the dust to remember it was once a mountain.
 For a sleigh to stop spinning.

@@ -234,6 +234,7 @@ with the people who hit the Moon with you.`).trim() }],
       thumb: "assets/art/03.png",
       art: "assets/art/03.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/41i3zyii9qsEqtF3l5RLRo?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`
 
 The Moon trembles again.
@@ -339,6 +340,7 @@ HO-HO-HO! HOLD ONTO SOMETHING.”
       thumb: "assets/art/04.png",
       art: "assets/art/04.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/5pPr6sFekgqOCuqXiB3cJ3?utm_source=generator",
       lyricsSections: [{ label: "Instrumental", text: "—" }],
       pos: { x: 25, y: 26 }
     },
@@ -351,6 +353,7 @@ HO-HO-HO! HOLD ONTO SOMETHING.”
       thumb: "assets/art/05.png",
       art: "assets/art/05.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/1n7bgK3O43kcrYI3cGarRb?utm_source=generator",
       lyricsSections: [{ label: "Instrumental", text: "—" }],
       pos: { x: 32, y: 76 }
     },
@@ -363,6 +366,7 @@ HO-HO-HO! HOLD ONTO SOMETHING.”
       thumb: "assets/art/06.png",
       art: "assets/art/06.png",
       youtube: "#",
+      spotifyEmbed: "https://open.spotify.com/embed/track/20dSCdXcFpPW081RgYc1Rw?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`“LIGHT IT!
 LIGHT IT!
 BOOSTER’S BRIGHTER THAN MIDNIGHT!!”
@@ -449,6 +453,7 @@ Light it!
       thumb: "assets/art/07.png",
       art: "assets/art/07.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/07BckRZEzTrF5MsMvfcITs?utm_source=generator",
       lyricsSections: [{ label: "Instrumental", text: "—" }],
       pos: { x: 48, y: 72 }
     },
@@ -461,6 +466,7 @@ Light it!
       thumb: "assets/art/08.png",
       art: "assets/art/08.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/154yImjhBRNHlChGfShy2v?utm_source=generator",
       lyricsSections: [{ label: "Instrumental", text: "—" }],
       pos: { x: 56, y: 40 }
     },
@@ -473,6 +479,7 @@ Light it!
       thumb: "assets/art/09.png",
       art: "assets/art/09.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/5VselCXbPmMi0KZl0eXKon?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`The sky forgot to fall
 When I said your name
 Heat learns how to listen
@@ -535,6 +542,7 @@ I’m with you
       thumb: "assets/art/10.png",
       art: "assets/art/10.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/1O9XX64ijQSKoLDY82CrgK?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`This is not a story.
 This already happened.
 
@@ -615,6 +623,7 @@ we did.
       thumb: "assets/art/11.png",
       art: "assets/art/11.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/52XpTuxJJQXhGGeUwrihci?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`
 
 We landed hard.
@@ -699,6 +708,7 @@ Dance with Cype...
       thumb: "assets/art/12.png",
       art: "assets/art/12.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/52XpTuxJJQXhGGeUwrihci?utm_source=generator",
       lyricsSections: [{ label: "Instrumental", text: "—" }],
       pos: { x: 82, y: 42 }
     },
@@ -710,7 +720,8 @@ Dance with Cype...
       layer: "Flashback",
       thumb: "assets/art/13.png",
       art: "assets/art/13.png",
-      youtube: "#",
+      youtube: "#", 
+	  spotifyEmbed: "https://open.spotify.com/embed/track/1nPz3W2sU2F9JgxXeU5QPF?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`Santa’s sleighplane sputters
 dust settles
 someone’s already playing a note
@@ -785,6 +796,7 @@ So turn it up
       thumb: "assets/art/14.png",
       art: "assets/art/14.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/25rMFkEc2swfI1fIHMQUbK?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`We arrive…
 …not where we planned.
 
@@ -897,6 +909,7 @@ CLAP CLAP CLAP!
       thumb: "assets/art/15.png",
       art: "assets/art/15.png",
       youtube: "#",
+	  spotifyEmbed: "https://open.spotify.com/embed/track/33TGHj75BlGhuAmnaLtxVd?utm_source=generator",
       lyricsSections: [{ label: "Lyrics", text: (`North Pole  hands up high
 Snow in the air, let the bass fly
 All night  neon lights

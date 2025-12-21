@@ -1064,6 +1064,12 @@ const elBtnHome = document.getElementById("btnHome");
 const elBtnPlaylist = document.getElementById("btnPlaylist");
 
 if (elBtnPlaylist) elBtnPlaylist.href = DATA.playlistUrl;
+const elSpotifyPlayer = document.getElementById("spotifyPlayer");
+
+// --- Spotify Player State ---
+let playerOpen = false;   // sichtbar / “aktiv”
+let playingId = null;     // welcher Song ist gerade im Player geladen
+
 
 // ====== RENDER NODES ======
 function renderNodes(){
@@ -1122,12 +1128,14 @@ function openSong(id){
   elPanelTitle.textContent = s.title;
   elPanelMeta.textContent = `#${s.order} · ${s.arc}`;
 
-  if (elBtnYT) elBtnYT.href = s.youtube || "#";
+  if (elBtnYT) elBtnYT.href = "#"; // Play steuert jetzt den Spotify-Embed
   if (elBtnArt) elBtnArt.href = s.art || "#";
 
 
   renderLyrics(s);
   updatePrevNextButtons();
+  syncPlayButton();
+
 }
 
 function closeSong(){
@@ -1139,6 +1147,8 @@ function closeSong(){
 
   elPanel.classList.add("hidden");
   elPanelEmpty.classList.remove("hidden");
+  syncPlayButton();
+
 }
 
 function toggleSong(id){
@@ -1179,10 +1189,100 @@ function updatePrevNextButtons(){
   elBtnPrev.onclick = ()=> prev && openSong(prev.id);
   elBtnNext.onclick = ()=> next && openSong(next.id);
 }
+function setSpotifyEmbed(embedUrl){
+  if(!elSpotifyPlayer) return;
+
+  if(!embedUrl){
+    elSpotifyPlayer.innerHTML = "";
+    elSpotifyPlayer.classList.add("hidden");
+    playerOpen = false;
+    return;
+  }
+
+  elSpotifyPlayer.innerHTML = `
+    <iframe
+      src="${embedUrl}"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      style="border-radius:12px; width:100%; height:152px; border:0;">
+    </iframe>
+  `;
+  elSpotifyPlayer.classList.remove("hidden");
+  playerOpen = true;
+}
+
+function getSongById(id){
+  return DATA.songs.find(x => x.id === id) || null;
+}
+
+function syncPlayButton(){
+  if(!elBtnYT) return;
+
+  // Kein aktiver Song ausgewählt -> disabled Look (Anchor kann man nicht “disabled” setzen, aber wir können optisch/aria)
+  if(!activeId){
+    elBtnYT.textContent = "Play";
+    elBtnYT.setAttribute("aria-disabled", "true");
+    elBtnYT.classList.add("disabled");
+    elBtnYT.href = "#";
+    return;
+  }
+
+  elBtnYT.removeAttribute("aria-disabled");
+  elBtnYT.classList.remove("disabled");
+  elBtnYT.href = "#";
+
+  // Wenn Player offen und spielt gerade denselben Song -> “Close Player”
+  if(playerOpen && playingId === activeId){
+    elBtnYT.textContent = "Close player";
+  } else if(playerOpen && playingId !== activeId){
+    elBtnYT.textContent = "Switch";
+  } else {
+    elBtnYT.textContent = "Play";
+  }
+}
+
+function toggleSpotifyForActive(){
+  if(!activeId) return;
+
+  const s = getSongById(activeId);
+  const embed = s?.spotifyEmbed;
+
+  if(!embed){
+    console.warn("No spotifyEmbed set for:", activeId, s?.title);
+    return;
+  }
+
+  // Player geschlossen -> öffnen mit active
+  if(!playerOpen){
+    setSpotifyEmbed(embed);
+    playingId = activeId;
+    syncPlayButton();
+    return;
+  }
+
+  // Player offen -> anderer Song ausgewählt -> switch
+  if(playingId !== activeId){
+    setSpotifyEmbed(embed);
+    playingId = activeId;
+    syncPlayButton();
+    return;
+  }
+
+  // Player offen und gleicher Song -> toggle zu
+  setSpotifyEmbed(null);
+  playingId = null;
+  syncPlayButton();
+}
+
 
 // ====== UI HOOKS ======
 elBtnClose?.addEventListener("click", closeSong);
 elBtnHome?.addEventListener("click", closeSong);
+elBtnYT?.addEventListener("click", (e)=>{
+  e.preventDefault();
+  toggleSpotifyForActive();
+});
+
 
 // ESC to close
 document.addEventListener("keydown", (e)=>{
@@ -1201,3 +1301,5 @@ function escapeHtml(str){
 
 // init
 renderNodes();
+syncPlayButton();
+
